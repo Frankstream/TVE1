@@ -1,20 +1,630 @@
 <!DOCTYPE html>
-<head><title></title></head>
-
+<html>
+<head>
 <style>
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Work Sans", sans-serif;
+  font-size: 21px;
+}
+
+.headings_color {
+  color: #4f81bd;
+}
+
+h1 {
+  font-size: 3.5rem;
+  line-height: 1.1em;
+  padding-bottom: 1em;
+}
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: center;
+  background: rgba(14, 14, 14, 0.85);
+  color: white;
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+}
+
+.content {
+  text-align: center;
+  margin-top: 7em;
+  maximum-width: 350px;
+  min-width: 50%;
+}
+
+/* .video-bg {
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+} */
+
+.video-bg {
+  position: fixed;
+  z-index: -1;
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .video-bg {
+    width: 100%;
+    height: auto;
+  }
+}
+@media (max-aspect-ratio: 16/9) {
+  .video-bg {
+    width: auto;
+    height: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .video-bg {
+    display: none;
+  }
+  body {
+    background: url("https://images.pexels.com/photos/3783471/pexels-photo-3783471.jpeg?cs=srgb&dl=pexels-dmitry-demidov-3783471.jpg&fm=jpg");
+    background-size: cover;
+  }
+  .content {
+    margin-top: 2em;
+  }
+  .radio-player {
+    margin: 0 5px;
+  }
+}
+
+
+
+
+
+/*-- CSS MENU --*/
 
 body {
   background-color: #000000;}
 
+ 
+ .logo {
+    float: left;
+    width: 21%;
+    height: 75px;
+    background-color: #000000; /* Black */
+    background-size: 105% 106%;
+    background-repeat: no-repeat;
+    background-position: center;
+   box-shadow: inset 0 0 0 3px grey;
+    color: #ff000000;
+    padding: 0;
+    margin: 2% 2% 2% 2% ;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;}
+
+.canal_1 {background-image: url("https://drive.google.com/uc?export=view&id=1K0DrY50X5NahMmWbY_JloLIqrc__iL9T");}
+.canal_2 {background-image: url("https://drive.google.com/uc?export=view&id=1AcueJR-Y_ZSvKCVKNzlHS-wAnnLM0yJQ");}
+.canal_3 {background-image: url("https://drive.google.com/uc?export=view&id=1QRCfD6KNv3cpQFOlq_jyoOJunnpgHZsB");}
+.canal_4 {background-image: url("https://drive.google.com/uc?export=view&id=1tVFuggINiumBDoE2Opd7wG366qI9m_cV");}
+.canal_5 {background-image: url("https://drive.google.com/uc?export=view&id=1bGrGeMqmU8dAU5hQWMSWhrVdQfLrz6i1");}
+.canal_6 {background-image: url("https://drive.google.com/uc?export=view&id=1x9HFNqV0Cq6-ALBo8QyQIwIaQEu4mjlU");}
+.canal_7 {background-image: url("https://drive.google.com/uc?export=view&id=12DjP2i_tShpnscFYq5X1nfa5O2ZlRDzH");}
+.canal_8 {background-image: url("https://drive.google.com/uc?export=view&id=1-uIgSw-RUE-TZ-Vy72HHvjjqGfD2gLZB");}
+.canal_9 {background-image: url("https://drive.google.com/uc?export=view&id=1fTAlzKSlNc_zgV10YQQDEINK3_RkHlA-");}
+.canal_10 {background-image: url("https://drive.google.com/uc?export=view&id=1xHCahtdxRBWGAMrF1exUyXB_bzJRn3hW");}
+.canal_11 {background-image: url("https://drive.google.com/uc?export=view&id=1kncGghoQwD9vdlfbicYkabu__Fyxv_o1");}
+.canal_12 {background-image: url("https://drive.google.com/uc?export=view&id=14q-3mqdR8WFFuhV_qhoCQwkeo5tqL4vw");}
+.canal_13 {background-image: url("https://drive.google.com/uc?export=view&id=1-AaV2a3aBe4UQJwnkNNa0u6Cy4isFNDH");}
+.canal_14 {background-image: url("https://drive.google.com/uc?export=view&id=1JPCclG-LAVPd-j9NEq8JbjXiOFeObIHa");}
+.canal_15 {background-image: url("https://drive.google.com/uc?export=view&id=1kX5CdRlgjDFu1_UswOqEFkUc2rVcErAK");}
+.canal_16 {background-image: url("https://drive.google.com/uc?export=view&id=1fCJqmvuvmsHuACuDEOGVnRfqolN_Kvu8");}
+.canal_17 {background-image: url("https://drive.google.com/uc?export=view&id=1VzdwuTDZERguinwupv89glbUV6fCN3yk");}
+.canal_18 {background-image: url("https://drive.google.com/uc?export=view&id=1jJAB6Fe7fWFj7pwlwv-KXEWC4GhMfuYK");}
+
+   
+.modalmask {
+	position: fixed;
+	font-family: Arial, sans-serif;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,0.8);
+	z-index: 99999;
+	opacity:0;
+	-webkit-transition: opacity 0ms ease-in;
+	-moz-transition: opacity 0ms ease-in;
+	transition: opacity 0ms ease-in;
+	pointer-events: none;
+	overflow-y:auto;
+}
+
+.modalmask:target {
+	opacity:1;
+	pointer-events: auto;
+}
+
+.modalbox{
+	width: 100%;
+	position: relative;
+	padding: 0px 0px 0px 0px;
+	background: #000000;
+	border-radius:3px;
+	-webkit-transition: all 0ms ease-in;
+	-moz-transition: all 0ms ease-in;
+	transition: all 0ms ease-in;
+	overflow-y:auto;
+}
+
+.movedown {
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+	padding: 4%;
+  margin: 0 auto;
+
+}
+
+.rotate {
+	margin: 0 auto;
+	-webkit-transform: scale(-5,-5); 
+	transform: scale(-5,-5);
+}
+
+.resize {
+	margin: 0 auto;
+	width:0;
+	height:0;
+}
+
+.modalmask:target .movedown{		
+	margin:0 auto;
+}
+.modalmask:target .rotate{		
+	transform: rotate(360deg) scale(1,1);
+  -webkit-transform: rotate(360deg) scale(1,1);
+}
+
+.modalmask:target .resize{
+	width:300px;
+	height:200px;
+}
+
+.nsc{
+	position:absolute;
+	bottom:0;
+	right:0;
+}
+
+
+/*-- CSS CANAL --*/
+
+
+p {
+  font-size: 0;
+  color: grey;
+  text-align: center;}
+
+
+h1 {
+  font-size: 10px;
+  color: white;
+  text-align: center;}
+
+
+h2 {
+  display:inline;
+  font-size: 15px;
+  color: white;
+  float: left;
+  margin: 0;
+  text-align: left;}
+  
+.nieto {
+  margin: 5px 0px 5px 0px;
+  padding: 0px 0px 5px 0px;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+  float: left;
+  background-color: #393939;
+  border: 3px solid #393939;
+  border-radius: 8px;}
+  
+img {
+  width: 90%;
+  height: 20px;
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+  border: 2px solid #ffffff;
+  border-radius: 3px;}
+  
+.img_titulo{
+  width: 35%;
+  height: 10%;
+  display:block;
+  margin:auto;
+	border: none;}
+	
+.btn-cerrar {
+  text-decoration: none;
+  padding: 3px;
+  margin: 10px 0px 10px 0px;
+  font-weight: bold;
+  font-size: 9px;
+  color: grey;
+  background-color: #000000;
+  box-shadow: inset 0 0 0 2px grey;
+  float: right;}
+ 
+  
+
+     
 </style>
-
-
+</head>
 <body>
 
 
- <script type="text/javascript">id="73184"; width="100%"; height="100%";</script><script type="text/javascript" src="https://embed.telerium.tv/embed.js"></script><iframe allowfullscreen="" width="100%" height="100%" scrolling="no" frameborder="0" marginwidth="0" marginheight="0" allowtransparency="true" src="https://telerium.digital/embed/73184.html"></iframe>
 
-    
+<!-- M+ ESTRENOS -->
+
+<div><a href="#demo1" class="logo canal_1"></a></div>
+<div id="demo1" class="modalmask" style="color:#000000;">
+<div align="center" class="modalbox movedown" style="width:auto">
+
+<a href="#" class="btn-cerrar">X</a>
+
+<div>
+  <a href="#demo1" class="img_titulo"></a>
+
+  <audio controls>    
+    <source src="https://streaming.rac105.cat/">
+  </audio>
+</div>
+  
+</div>
+</div>
+
+<!-- M+ ACCION -->
+
+<div><a href="#demo1" class="logo canal_1"></a></div>
+<div id="demo1" class="modalmask" style="color:#000000;">
+<div align="center" class="modalbox movedown" style="width:auto">
+
+<a href="#" class="btn-cerrar">X</a>
+
+<div>
+  <a href="#demo1" class="logo canal_1"></a>
+
+  <audio controls>    
+    <source src="https://streaming.rac105.cat/">
+  </audio>
+</div>
+  
+</div>
+</div>
+
+<!-- M+ COMEDIA -->
+
+<div><a href="#demo1" class="logo canal_1"></a></div>
+<div id="demo1" class="modalmask" style="color:#000000;">
+<div align="center" class="modalbox movedown" style="width:auto">
+
+<a href="#" class="btn-cerrar">X</a>
+
+<div>
+  <a href="#demo1" class="logo canal_1"></a>
+
+  <audio controls>    
+    <source src="https://streaming.rac105.cat/">
+  </audio>
+</div>
+  
+</div>
+</div>
+
+<!-- M+ DRAMA -->
+
+<div><a href="#demo1" class="logo canal_1"></a></div>
+<div id="demo1" class="modalmask" style="color:#000000;">
+<div align="center" class="modalbox movedown" style="width:auto">
+
+<a href="#" class="btn-cerrar">X</a>
+
+<div>
+  <a href="#demo1" class="logo canal_1"></a>
+
+  <audio controls>    
+    <source src="https://streaming.rac105.cat/">
+  </audio>
+</div>
+  
+</div>
+</div>
+
+<!-- M+ CINEDOC&ROLL -->
+
+<div><a href="#demo5" class="logo canal_1"></a></div>
+<div id="demo5" class="modalmask" style="color:#000000;">
+<div align="center" class="modalbox movedown" style="width:auto">
+
+<a href="#" class="btn-cerrar">X</a>
+
+<div>
+  <a href="#demo1" class="logo canal_5"></a>
+
+  <audio controls>    
+    <source src="https://streaming.rac105.cat/">
+  </audio>
+</div>
+  
+</div>
+</div>
+
+<!-- M+ CINE Ñ -->
+
+<div><a href="#demo1" class="logo canal_1"></a></div>
+<div id="demo1" class="modalmask" style="color:#000000;">
+<div align="center" class="modalbox movedown" style="width:auto">
+
+<a href="#" class="btn-cerrar">X</a>
+
+<div>
+  <a href="#demo1" class="logo canal_1"></a>
+
+  <audio controls>    
+    <source src="https://streaming.rac105.cat/">
+  </audio>
+</div>
+  
+</div>
+</div>
+
+<!-- M+ #0 -->
+
+<div><a href="#demo1" class="logo canal_1"></a></div>
+<div id="demo1" class="modalmask" style="color:#000000;">
+<div align="center" class="modalbox movedown" style="width:auto">
+
+<a href="#" class="btn-cerrar">X</a>
+
+<div>
+  <a href="#demo1" class="logo canal_1"></a>
+
+  <audio controls>    
+    <source src="https://streaming.rac105.cat/">
+  </audio>
+</div>
+  
+</div>
+</div>
+
+<!-- AMC -->
+
+<div><a href="#demo1" class="logo canal_1"></a></div>
+<div id="demo1" class="modalmask" style="color:#000000;">
+<div align="center" class="modalbox movedown" style="width:auto">
+
+<a href="#" class="btn-cerrar">X</a>
+
+<div>
+  <a href="#demo1" class="logo canal_1"></a>
+
+  <audio controls>    
+    <source src="https://streaming.rac105.cat/">
+  </audio>
+</div>
+  
+</div>
+</div>
+
+<!-- PARAMOUNT NETWORK -->
+
+<div><a href="#demo1" class="logo canal_1"></a></div>
+<div id="demo1" class="modalmask" style="color:#000000;">
+<div align="center" class="modalbox movedown" style="width:auto">
+
+<a href="#" class="btn-cerrar">X</a>
+
+<div>
+  <a href="#demo1" class="logo canal_1"></a>
+
+  <audio controls>    
+    <source src="https://streaming.rac105.cat/">
+  </audio>
+</div>
+  
+</div>
+</div>
+
+<!-- DARK -->
+
+<div><a href="#demo1" class="logo canal_1"></a></div>
+<div id="demo1" class="modalmask" style="color:#000000;">
+<div align="center" class="modalbox movedown" style="width:auto">
+
+<a href="#" class="btn-cerrar">X</a>
+
+<div>
+  <a href="#demo1" class="logo canal_1"></a>
+
+  <audio controls>    
+    <source src="https://streaming.rac105.cat/">
+  </audio>
+</div>
+  
+</div>
+</div>
+
+<!-- CANAL HOLLYWOOD -->
+
+<div><a href="#demo1" class="logo canal_1"></a></div>
+<div id="demo1" class="modalmask" style="color:#000000;">
+<div align="center" class="modalbox movedown" style="width:auto">
+
+<a href="#" class="btn-cerrar">X</a>
+
+<div>
+  <a href="#demo1" class="logo canal_1"></a>
+
+  <audio controls>    
+    <source src="https://streaming.rac105.cat/">
+  </audio>
+</div>
+  
+</div>
+</div>
+
+<!-- TCM -->
+
+<div><a href="#demo1" class="logo canal_1"></a></div>
+<div id="demo1" class="modalmask" style="color:#000000;">
+<div align="center" class="modalbox movedown" style="width:auto">
+
+<a href="#" class="btn-cerrar">X</a>
+
+<div>
+  <a href="#demo1" class="logo canal_1"></a>
+
+  <audio controls>    
+    <source src="https://streaming.rac105.cat/">
+  </audio>
+</div>
+  
+</div>
+</div>
+
+<!-- TAQUILLA 1 -->
+
+<div><a href="#demo1" class="logo canal_1"></a></div>
+<div id="demo1" class="modalmask" style="color:#000000;">
+<div align="center" class="modalbox movedown" style="width:auto">
+
+<a href="#" class="btn-cerrar">X</a>
+
+<div>
+  <a href="#demo1" class="logo canal_1"></a>
+
+  <audio controls>    
+    <source src="https://streaming.rac105.cat/">
+  </audio>
+</div>
+  
+</div>
+</div>
+
+<!-- TAQUILLA 2 -->
+
+<div><a href="#demo1" class="logo canal_1"></a></div>
+<div id="demo1" class="modalmask" style="color:#000000;">
+<div align="center" class="modalbox movedown" style="width:auto">
+
+<a href="#" class="btn-cerrar">X</a>
+
+<div>
+  <a href="#demo1" class="logo canal_1"></a>
+
+  <audio controls>    
+    <source src="https://streaming.rac105.cat/">
+  </audio>
+</div>
+  
+</div>
+</div>
+
+<!-- TAQUILLA 3 -->
+
+<div><a href="#demo1" class="logo canal_1"></a></div>
+<div id="demo1" class="modalmask" style="color:#000000;">
+<div align="center" class="modalbox movedown" style="width:auto">
+
+<a href="#" class="btn-cerrar">X</a>
+
+<div>
+  <a href="#demo1" class="logo canal_1"></a>
+
+  <audio controls>    
+    <source src="https://streaming.rac105.cat/">
+  </audio>
+</div>
+  
+</div>
+</div>
+
+<!-- TAQUILLA 4 -->
+
+<div><a href="#demo1" class="logo canal_1"></a></div>
+<div id="demo1" class="modalmask" style="color:#000000;">
+<div align="center" class="modalbox movedown" style="width:auto">
+
+<a href="#" class="btn-cerrar">X</a>
+
+<div>
+  <a href="#demo1" class="logo canal_1"></a>
+
+  <audio controls>    
+    <source src="https://streaming.rac105.cat/">
+  </audio>
+</div>
+  
+</div>
+</div>
+
+<!-- TAQUILLA 5 -->
+
+<div><a href="#demo1" class="logo canal_1"></a></div>
+<div id="demo1" class="modalmask" style="color:#000000;">
+<div align="center" class="modalbox movedown" style="width:auto">
+
+<a href="#" class="btn-cerrar">X</a>
+
+<div>
+  <a href="#demo1" class="logo canal_1"></a>
+
+  <audio controls>    
+    <source src="https://streaming.rac105.cat/">
+  </audio>
+</div>
+  
+</div>
+</div>
+
+<!-- TAQUILLA 6 -->
+
+<div><a href="#demo1" class="logo canal_1"></a></div>
+<div id="demo1" class="modalmask" style="color:#000000;">
+<div align="center" class="modalbox movedown" style="width:auto">
+
+<a href="#" class="btn-cerrar">X</a>
+
+<div>
+  <a href="#demo1" class="logo canal_1"></a>
+
+  <audio controls>    
+    <source src="https://streaming.rac105.cat/">
+  </audio>
+</div>
+  
+</div>
+</div>
+
+
+
 </body>
 </html>
-
