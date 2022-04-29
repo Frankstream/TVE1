@@ -353,7 +353,7 @@ hr.barra1 {
   margin-top: -5px;
   position: center;
   width: 100%;
-  border: 2px solid red;
+  border: 2px solid black;
   border-radius: 0px;
 }
   
@@ -521,9 +521,14 @@ hr.barra1 {
   <a href="#demo1" class="caratula canal_7"></a>
 
 <div class="radio">
-    <audio controls="controls"><source  
-    <src="https://playerservices.streamtheworld.com/api/livestream-redirect/RADIOMARCA_NACIONAL.mp3">
-  </audio>
+    <audio id="mireproductor" src="https://playerservices.streamtheworld.com/api/livestream-redirect/RADIOMARCA_NACIONAL.mp3"></audio>
+<div>
+    <button onclick="document.getElementById('player').play()">Play</button>
+    <button onclick="document.getElementById('player').pause()">Pausa</button>
+    <button onclick="document.getElementById('player').load()">Stop</button>
+    <button onclick="document.getElementById('player').volume += .1">Subir volumen</button>
+    <button onclick="document.getElementById('player').volume -= .1">Bajar volumen</button>
+</div>
 </div>
   
 </div>
