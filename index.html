@@ -91,8 +91,9 @@ h1 {
 
 /*-- CSS MENU --*/
 
-body {
-  background-color: #000000;}
+body,html{
+height:100%; /*Siempre es necesario cuando trabajamos con alturas*/
+background-color: #000000;}
 
  
  .logo {
@@ -181,7 +182,7 @@ body {
     background-position: center;
     color: #ff000000;
     padding: 0;
-    margin: 2% 2% 10% 2% ;
+    margin: 0% 0% 10% 0% ;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -362,7 +363,14 @@ hr.barra1 {
   width: auto;
   height: auto;
   overflow: visible;
-  background-color: black;}
+  background-color: black;
+  color: #FFF;
+  position:absolute; /*El div será ubicado con relación a la pantalla*/
+  left:0px; /*A la derecha deje un espacio de 0px*/
+  right:0px; /*A la izquierda deje un espacio de 0px*/
+  bottom:0px; /*Abajo deje un espacio de 0px*/
+  height:50px; /*alto del div*/
+  z-index:0;}
   
 .cerrar {
   margin: 0;
